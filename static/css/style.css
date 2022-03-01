@@ -2,12 +2,18 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic);
 
+@font-face {
+   font-family: IRANSans;
+   src: url("IRANSans.ttf");
+ }
+
+
 html, body {
 	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'IRANSans',;
 	font-size: 14px;
 	line-height: 1;
 	font-weight: 400;
@@ -20,13 +26,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 	margin: 0px 0px 10px;
 	color: #272727;
-	font-family: "Open Sans", sans-serif;
+	font-family: "IRANSans", sans-serif;
 	text-transform: uppercase;
 }
 
 h4 {
 	font-size: 16px;
-	font-family: "Raleway", sans-serif;
+	font-family: "IRANSans", sans-serif;
 	font-weight: 700;
 	line-height: 22px;
 }
@@ -37,7 +43,7 @@ h3 {
 
 p {
 	margin-bottom: 22px;
-	font-family: "Open Sans", sans-serif;
+	font-family: "IRANSans", sans-serif;
 	font-size:14px;
 	line-height: 25px;
 	color: #727272;
@@ -727,7 +733,7 @@ section {
 
 .home {
 	overflow: hidden;
-	font-family: "Raleway", sans-serif;
+	font-family: "IRANSans", sans-serif;
 }
 
 .home .slides {
@@ -760,7 +766,8 @@ section {
 .home .flexslider .slides img {
 	background-position: center 0;
 	background-repeat: no-repeat;
-	background-size: cover;
+
+	/*background-size: cover;*/
 	width: 100%;
 }
 
@@ -1282,7 +1289,7 @@ html[xmlns] .slides {
  left: 0px;
  content: "\f058";
  position: absolute;
- font-family: "FontAwesome";
+ font-family: "IRANSans";
 }
 
 
@@ -1450,7 +1457,7 @@ ul.timeline {
 
 .work-grid .mix {
 	opacity: 0;
-	display: none;
+	display: inline-block;
 }
 
 .filtering {
@@ -1494,16 +1501,22 @@ ul.timeline {
 
 .work-grid {
 	width: 100%;
+	height: 100%;
 	padding:0;
+
 }
 
 .work-grid .work-item {
 	overflow: hidden;
+
+	height: 100%;
 }
 
 .work-grid .work-item .work-image {
 	overflow: hidden;
 	width: 100%;
+	height: 100%;
+
 	-webkit-transition: all 0.8s;
 	-moz-transition: all 0.8s;
 	transition: all 0.8s;
@@ -1511,7 +1524,10 @@ ul.timeline {
 
 .work-grid .work-item .work-image img {
 	width:100%;
-	height: auto;
+	height: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	object-fit: cover;
 }
 
 .work-grid .work-item .work-caption {
@@ -1561,20 +1577,26 @@ ul.timeline {
 	z-index:200;
 }
 
-.work-grid .work-item:hover .hover-link, .work-grid .work-item:hover .work-caption {
+.work-grid .work-item:hover .hover-link, .work-grid .work-item:hover .work-caption 
+{
 	opacity:1;
 }
 
-.work-grid .work-item:hover .work-caption {
+.work-grid .work-item:hover .work-caption 
+{
 	background: rgba(0, 0, 0, 0.72);
 }
 
 .thumnail-img {
 	position: relative;
-	float: left;
+	float: right;
 	display: inline-block;
 	width: 25%;
 	overflow: hidden;
+	height: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	object-fit: cover;
 }
 
 
@@ -1791,15 +1813,15 @@ ul.timeline {
 }
 
 .services-box .services-icon {
-	width: 80px;
-	height: 80px;
+	width: 200px;
+	height: 200px;
 	color: #FFF;
 	font-size: 38px;
 	line-height: 80px;
 	border-radius: 50%;
 	display: inline-block;
 	margin: 0px auto;
-	background: #7EC13F none repeat scroll 0% 0%;
+	/*background: #7EC13F none repeat scroll 0% 0%;*/
 }
 
 .services-box .services-desc {
@@ -2062,7 +2084,7 @@ ul.timeline {
 	line-height: 36px;
 	margin-bottom: 30px;
 	font-style: italic;
-	font-family: "Roboto";
+	/*font-family: "Roboto";*/
 }
 
 #testimonials .name {
@@ -2233,7 +2255,7 @@ ul.timeline {
 /*-----------------------------------------------------------------*/
 
 #page-header {
-	background:url('../images/page-header.jpg');
+	/*background:url('../images/page-header.jpg');*/
 	padding: 130px 0px 80px;
 	text-align: center;
 }
