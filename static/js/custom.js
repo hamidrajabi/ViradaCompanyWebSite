@@ -4,8 +4,8 @@
 /*------------------------------*/
 
 
- $(window).ready(function() {
-	$(".loader-item").delay(1000).fadeOut();
+ $(window).load(function() {
+	$(".loader-item").delay(500).fadeOut();
 	$("#pageloader").delay(1000).fadeOut("slow");
 	});
 
@@ -138,7 +138,7 @@
 		slideSpeed : 400,
 		pagination : false,
 		singleItem:true,
-		autoPlay: false,
+		autoPlay: true,
 		navigation : true,
 		 navigationText: [
       "<i class='fa fa-angle-left'></i>",
