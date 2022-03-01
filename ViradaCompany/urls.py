@@ -22,7 +22,7 @@ from django.views.static import serve
 from django.conf import settings 
 
 # from virada.sitemaps import StaticViewSitemap
-from django.contrib.sitemaps.views import sitemaps
+# from django.contrib.sitemaps.views import sitemaps
 
 urlpatterns = [
     re_path(r'^images/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
