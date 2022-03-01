@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_&)1=pws6i6=r$g=_w^tvf40dj+y_$2p3m@)l)83*2705-jpls
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["viradaco.ir"]
 
 
 # Application definition
