@@ -1,0 +1,204 @@
+{%load static%}
+
+<!doctype html>
+<!--
+	Lamoda by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+
+<html lang="en-gb" class="no-js">
+  <head>
+    <meta charset="utf-8">
+	<title>ویرادا| صفحه اصلی</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">		
+		
+	<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+      <!-- <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/> -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="{%static 'images/favicons/apple-touch-icon.png'%}">
+<link rel="icon" type="image/png" sizes="32x32" href="{%static 'images/favicons/favicon-32x32.png'%}">
+<link rel="icon" type="image/png" sizes="16x16" href="{%static 'images/favicons/favicon-16x16.png'%}">
+<link rel="manifest" href="{%static 'images/favicons/site.webmanifest'%}">
+     <!--styles -->
+    <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{%static 'css/font-awesome.css'%}" rel="stylesheet">
+    <link href="{%static 'js/owl-carousel/owl.carousel.css'%}" rel="stylesheet">
+    <link href="{%static 'js/owl-carousel/owl.theme.css'%}" rel="stylesheet">
+    <link href="{%static 'js/owl-carousel/owl.transitions.css'%}" rel="stylesheet">
+    <link href="{%static 'css/magnific-popup.css'%}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/animate.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/etlinefont.css'%}">
+    <link href="{%static 'css/style.css'%}" type="text/css"  rel="stylesheet"/>
+
+
+   <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    
+	<body  data-spy="scroll" data-target="#main-menu">
+ 
+
+  <!--Start Page loader -->
+  <div id="pageloader">   
+        <div class="loader">
+          <img src="{%static 'images/progress.gif'%}" alt='loader'/>
+        </div>
+   </div>
+   <!--End Page loader -->
+   
+      
+   <!--Start Navigation-->
+		<header id="header" style="direction:rtl;font-family: IRANSans;">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="fa fa-bars"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+                            <!--Start Logo -->
+							<div class="logo-nav" style="width: 20%;">
+								<a href="index.html">
+									<img src="{%static 'images/CompanyLogo.png'%}" alt="Company logo" />
+								</a>
+							</div>
+                            <!--End Logo -->
+							<div class="clear-toggle"></div>
+							<div id="main-menu" class="collapse scroll navbar-right">
+								<ul class="nav">
+                                
+									<li class="active"> <a href="{%url 'Home'%}">خانه</a> </li>
+									
+									<li> <a href="#about">درباره ما</a> </li>
+                                    
+                                    <!-- <li> <a href="#history">سابقه</a> </li> -->
+                                    
+                                    <li> <a href="#works">کار ما</a> </li>
+                                    
+                                     <!-- <li> <a href="#team">تیم</a> </li> -->
+                                   
+								    <li> <a href="#services">خدمات</a> </li>
+																		
+									<!-- <li> <a href="#blog">مطالب آموزشی</a></li> -->
+                                    
+                                    <!-- <li> <a href="#testimonials">نظر مشتریان ما</a></li> -->
+                                     
+									<li> <a href="#contact">تماس با ما</a> </li>
+										
+								</ul>
+							</div><!-- end main-menu -->
+						</div>
+					</div>
+				</div>
+			</header>
+    <!--End Navigation-->
+
+
+                {% block content %}
+
+                {% endblock content %}
+
+
+   <!--Start Contact-->
+   <section id="contact" class="section parallax">
+      <div class="overlay"></div>
+       <div class="container">
+           <div class="row">
+           
+                 <div class="title-box text-center white">
+                    <h2 class="title">تماس با ما</h2>
+                 </div>
+             </div>
+
+               <!--Start contact form-->
+               <div class="col-md-8 col-md-offset-2 contact-form">
+               
+                    <div class="contact-info text-center">
+                       <p> <a href="tel:09153626468"> 09153626468  </a> <i style="font-size:24px" class="fa">&#xf095;</i> </p>
+                       <p>  خراسان جنوبی، قاین، مرکز رشد واحد های فناور  <i style="font-size:24px" class="fa">&#xf041;</i></p>
+                       <p><i style="font-size:24px" class="fa">&#xf0e0;</i>
+<a href="mailto:info@viradaco.ir">  info@viradaco.ir </a> </p>
+                    </div>
+                     
+<!--                      <form method="post">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input class="form-control" id="name" placeholder="Full Name" type="text">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="form-control" id="email" placeholder="Your Email" type="email">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="form-control" id="subject" placeholder="Subject" type="text">
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="form-control" id="message" rows="7" placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-green">SEND MESSAGE</button>
+                            </div>
+                        </div>
+                    </form> -->
+               </div>
+              <!--End contact form-->
+              
+       </div> <!-- /.container-->
+   </section>
+   <!--End Contact-->
+   
+   
+   <!--Start Footer-->
+   <footer>
+       <div class="container">
+           <div class="row">
+               <!--Start copyright-->
+               <div class="col-md-6 col-sm-6 col-xs-6">
+                   <div class="copyright"><p>Copyright © 2022 All Rights reserved by:  <a href="https://viradaco.ir">Vira Danesh Asual Co.</a>
+                 </p></div>
+               </div>
+               <!--End copyright-->
+               
+               <!--start social icons-->
+               <div class="col-md-6 col-sm-6 col-xs-6">
+                   <div class="social-icons">
+                       <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                       </ul>
+                    </div>
+               </div>
+               <!--End social icons-->
+           </div> <!-- /.row-->
+       </div> <!-- /.container-->
+   </footer>
+   <!--End Footer-->
+
+   <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
+
+    <!--Plugins-->
+	<script type="text/javascript" src="{%static 'js/jquery-1.11.1.min.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/bootstrap.min.js'%}"></script> 
+    <script type="text/javascript" src="{%static 'js/owl-carousel/owl.carousel.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.flexslider-min.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.magnific-popup.min.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/easing.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.easypiechart.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.appear.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.parallax-1.1.3.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.mixitup.min.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/custom.js'%}"></script>
+    
+ </body>
+</html>

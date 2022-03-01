@@ -1,0 +1,81 @@
+{%extends 'base.html'%}
+<!doctype html>
+<!--
+	Lamoda by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+
+<html lang="en-gb" class="no-js">
+  <head>
+    <meta charset="utf-8">
+	<title>Lamoda Free Responsive Template | Template Stock</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">		
+		
+	<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    	
+
+{%block content%}
+      
+   <!--Start Navigation-->
+
+    <!--End Navigation-->
+
+		<!--start page-header -->
+		<section id="page-header" class="parallax" style="background:url('{{workItem.ourWork.headerImageURL}}')">
+             <div class="overlay"></div>
+			<div class="container">
+				<h1>{{workItem.title}}</h1>
+                <!--Start Breadcrumb-->
+ 
+                <!--End Breadcrumb-->
+			</div>
+		</section>
+		<!--End page-header -->
+		
+		<!--Start single-work -->
+		<section id="single-work" class="section">
+			<div class="container">
+				<div class="row">					
+					<div class="col-md-7">						
+						<div id="single-work-slider" class="owl-carousel owl-theme">
+							<div class="item"><img src="{{workItem.slider1URL}}" alt=""></div>
+							<div class="item" >
+                                <video id="videoSlide" width="100%" height="100%" controls>
+                                <source src="{{workItem.videoURL}}" type="video/mp4">
+                            </div>
+							<div class="item"><img src="images/works/img6.jpg" alt=""></div>		 
+						</div>	
+					</div>
+                    
+                    <!--Start Work Detail-->
+					<div class="col-md-5 work-detail">
+                            <h3 class="margin-bottom-15">Work Description </h3>	
+						<p>{{workItem.workDescription}}</p>					
+						<ul class="work-detail-list">
+							<li><span>دسته بندی :</span>{{workItem.ourWork}}</li>
+							<li><span>Client :</span>Newtheme</li>
+							<li><span>Technoligies used :</span>HTML 5,CSS 3</li>
+                            <li><span>Tags :</span>Photography, Branding, Wordpress</li>
+							<li><span>تاریخ اضافه شدن مطلب</span>{{workItem.created_at}}</li>
+						</ul>
+                        
+                        <a href="#" class="btn btn-gray-border">Visit website</a>
+                        
+					</div>
+                    <!--End Work Detail-->
+				</div> <!--/ row-->
+			</div> <!--/ container-->		
+		</section>
+		<!--End single-work -->
+		
+	<!--related works -->
+
+    <!-- End related works -->
+
+{%endblock content%}
+

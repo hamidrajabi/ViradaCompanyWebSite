@@ -1,0 +1,374 @@
+
+{%extends 'base.html'%}  
+{%block content%}    
+{%load static%}
+
+        <!-- Start Slider  -->
+        <section id="home" class="home">
+             <div class="slider-overlay"></div>
+            <div class="flexslider">
+                <ul class="slides scroll">
+                    {%for slider in sliders%}
+                    <li class="first">
+                        <div class="slider-text-wrapper">  
+                            <div class="container">
+                                <div class="big">{{slider.title}}</div>          
+                                <div class="small">{{slider.subtitle}}</div>
+                                <a href="{{slider.buttonLink}}" class="middle btn btn-white">{{slider.buttonName}}
+                                </a>
+                            </div>       
+                        </div>
+                        <img src="{{slider.imageURL}}" alt="" style="background-size: contain;">
+                    </li>
+                    {%endfor%}
+ <!--                    <li class="secondary">
+                        <div class="slider-text-wrapper"> 
+                            <div class="container">                       
+                                <div class="big">انجام پروژه های برنامه نویسی </div>          
+                                <div class="small">Are you ready to buy this theme</div>
+                                <a href="#works" class=" middle btn btn-white">VIEW PORTFOLIO</a>
+                            </div>
+                         </div>
+                        <img src="images/slider/2.jpg" alt="">
+                    </li>
+                    
+                    <li class="third">
+                        <div class="slider-text-wrapper"> 
+                            <div class="container">                              
+                                <div class="big">فروش سیستم های هوشمند امنیت منازل </div>          
+                                <div class="small">Are you ready to buy this theme</div>
+                                <a href="#works" class="middle btn btn-white">VIEW PORTFOLIO</a>
+                             </div>
+                        </div>
+                        <img src="images/slider/3.jpg" alt="">
+                    </li> -->
+                </ul>
+            </div>
+        </section>
+          <!-- End Slider  -->
+
+  <!--Start Services-->
+   <section id="services" class="section" >
+        <div class="container">
+            <div class="row" >    
+                 <div class="title-box text-center">
+                    <h2 class="title">خدمات ما</h2>
+                 </div>
+{%for ourService in ourServices%}
+               <!--Services Item-->
+               <div class="col-md-4">
+                   <div class="services-box">
+                       <div class="services-icon"> <a href=""><img style="border-radius: 40%;width: auto;height:100%" src={{ourService.imageURL}}> </a> 
+                       </div>
+                       <div class="services-desc">
+                          <h4 dir="rtl">{{ourService.title}}</h4>
+                          <p style="direction:rtl">{{ourService.text}}</p>
+                       </div>
+                   </div>
+               </div>
+                <!--End services Item-->
+{%endfor%}
+            </div> <!--/.row-->
+        </div> <!--/.container-->
+   </section> 
+  <!--End Services-->
+
+
+   <section id="works" class="section" style="direction: rtl;font-family:IRANSans";>
+                <!-- Filtering -->
+                  <div class="title-box text-center">
+                    <h2 class="title">کار ما</h2>
+                 </div>
+
+
+                    <div class=" col-md-12 text-center">
+                        <!-- Filtering -->
+                        <ul class="filtering">
+                            <li class="filter" data-filter="all">همه</li>
+                            {%for ourWork in ourWorks%}
+                            <li class="filter" data-filter="{{ourWork.title}}">{{ourWork.title}}</li>
+                            {%endfor%}
+<!--                             <li class="filter" data-filter="fashion">سیستم های هوشمند امنیتی</li>
+                            <li class="filter" data-filter="event">طراحی وبسایت</li>
+                            <li class="filter" data-filter="wedding">برنامه نویسی تخصصی</li>
+                            <li class="filter" data-filter="corporate">امبدد سیستم ها</li> -->
+                        </ul>
+                    </div>
+                
+                <div class="work-main">
+                    <!-- Work Grid -->
+                    <ul class="work-grid">
+                        <!-- Work Item -->
+                        {%for workItem in workItems%}
+                        <li class="work-item thumnail-img mix {{workItem.ourWork.title}}" style="min-height: 100%;object-fit: cover;" >
+                            <div class="work-image" >
+                                <img src="{{workItem.imageURL}}"  alt="thumbnail">
+                                
+                                 <!--Hover link-->
+                                 <div class="hover-link">
+                                    <a href="{%url 'single-work' workTitle=workItem.title %}">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+        
+                                    <a href="{{workItem.imageURL}}" class="popup-image">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                 </div>
+                                 <!--End link-->
+
+                                 <!--Hover Caption-->
+                                 <div class="work-caption">
+                                     <h4>{{workItem.title}}</h4>
+                                     <p>{{workItem.subtitle}}</p>
+                                 </div>
+                                 <!--End Caption-->
+
+                            </div> <!-- /.work-image-->
+                        </li> 
+                        {%endfor%}
+                        <!--End Work Item -->
+                        
+
+                    </ul>
+                    
+                </div>
+            </section>
+  <!--End portfolio-->
+  
+
+ 
+  <!-- Start Facts-->
+
+  <!--End Facts-->
+
+  
+
+   
+     <!--Start History-->
+
+   <!--End History-->
+   
+
+   <!--Start portfolio-->
+
+ 
+   <!--Start Call To Action-->
+   <section id="cta" class="parallax">
+       <div class="overlay"></div>
+         <div class="container">
+             <div class="row text-center">
+                 <h2 style="direction:rtl">تمایل به همکاری با تیم ما را دارید؟</h2>
+                 <a href="#" class="btn btn-green">با ما تماس بگیرید</a>
+           </div>
+         </div>
+   </section>
+   <!--End Call To Action-->
+   
+   
+    
+
+
+ 
+     <!--Start Why Choose us-->
+ <!--  -->
+  <!--End Why Choose us-->
+
+ 
+    <!--Start video-->
+  <section id="video" class="section parallax">
+        <div class="overlay"></div>
+       <div class="container">
+           <div class="row">
+           
+                 <div class="title-box text-center white">
+                    <h2 class="title">ویدیو</h2>
+                 </div>
+             
+             <div class="col-md-6">
+                 <div class="video-caption-main">
+                      <!--Video caption #1-->
+                      <div class="video-caption">
+                          <div class="video-icon">
+                              <i class="fa fa-briefcase"></i>
+                          </div>
+                          <div class="video-caption-info">
+                              <h4>ارتباط آسان</h4>
+                              <p dir="rtl">به راحتی با ویرادا ارتباط برقرار کنید. ویرادا به زبان فارسی و پیام های کوتاه با شما ارتباط برقرار میکند</p>
+                          </div>
+                      </div>
+                       <!--Video caption #2-->
+                      <div class="video-caption">
+                          <div class="video-icon">
+                              <i class="fa fa-glass"></i>
+                          </div>
+                          <div class="video-caption-info">
+                              <h4>قابل نصب برروی تمامی انواع دربازکن</h4>
+                              <p dir="rtl">سیستم هوشمند ویرادا برروی انواع دربازکن قابلیت اتصال دارد و همچنین به آسانی و بدون داشتن مهارت خاصی نصب میشود.</p>
+                          </div>
+                      </div>
+                      <!--Video caption #3-->
+                      <div class="video-caption">
+                          <div class="video-icon">
+                              <i class="fa fa-rocket "></i>
+                          </div>
+                          <div class="video-caption-info">
+                              <h4>پردازنده مدرن و قدرتمند</h4>
+                              <p dir="rtl">سیستم امنیتی ویرادا از پردارنده مدرن و قدرتمند ۳۲ بیتی STM32 با معماری ARM بهره‌مند بوده که این موضوع سبب اطمینان بالا از عملکرد هرچه بهتر ویرادا می گردد.</p>
+                          </div>
+                      </div>
+                      
+                 </div>
+             </div>
+            <!-- End Video caption-->
+             
+            <div class="col-md-6">
+                <div class="play-video">
+                  <iframe src="https://www.aparat.com/video/video/embed/videohash/jf4cA/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+                </div>
+            </div> 
+               
+           </div> <!-- /.row-->
+       </div> <!-- /.container-->
+  </section>
+  <!--End video-->
+
+
+   <!-- Start blog-->
+  
+   <!-- End blog-->
+   
+ 
+  <!--Start Testimonial-->  
+
+    <!--Start clients-->
+    <section id="clients" class="section">
+           <div class="container">
+               <div class="row">
+               
+            <div class="title-box text-center">
+                <h2 class="title">مشتریان ما</h2>
+             </div>
+                
+                   <div class="clients-carousel">
+                   {%for clientCompany in clientCompanies%}
+                       <!-- Clients Logo Item-->
+                        <div class="item">
+                            <a href={{clientCompany.url}}>
+                                <figure>
+                                    <img src={{clientCompany.imageURL}} alt="" />
+                                </figure>
+                            </a>
+                        </div>
+                    {%endfor%}
+                        
+		         </div>
+               </div> <!--/.row-->
+         </div> <!--/.container-->
+    </section>
+   <!--End clients-->
+  <!--Start Features-->
+  <section  id="about" class="section">
+       <div class="container">
+           <div class="row">
+              
+              <!-- Features Icon-->
+              <div class="col-md-4">
+                  <div class="features-icon-box">
+                  
+                      <div class="features-icon">
+                      <i class="fa fa-leaf"></i>
+                      </div>
+                      
+                      <div class="features-info">
+                         <h4>روش های مدرن و بروز دنیا</h4>
+                         <p>ما پایبند هیچ روش قدیمی نیستیم. پا به پای تکنولوژی روز دنیا محصولات شما را می سازیم.</p>
+                      </div>
+                  </div>
+              </div>
+ 
+               <!-- Features Icon-->
+              <div class="col-md-4">
+                  <div class="features-icon-box">
+                  
+                      <div class="features-icon">
+                      <i class="fa fa-paper-plane"></i>
+                      </div>
+                      
+                      <div class="features-info">
+                         <h4>ارتباط با مشتریان</h4>
+                         <p>آماده پاسخگویی به سوالات شما در خصوص طریقه استفاده از دستگاه ها می باشیم.</p>
+                      </div>
+                  </div>
+              </div>
+
+               <!-- Features Icon-->
+              <div class="col-md-4">
+                  <div class="features-icon-box">
+                  
+                      <div class="features-icon">
+                     <i class="fa fa-life-saver"></i>
+                      </div>
+                      
+                      <div class="features-info">
+                         <h4>پشتیبانی مناسب</h4>
+                         <p>ما در کنار شما هستیم تا استفاده مورد انتظارتان از محصول را داشته باشید.</p>
+                      </div>
+                  </div>
+              </div>
+ 
+               <!-- Features Icon-->
+              <div class="col-md-4">
+                  <div class="features-icon-box">
+                  
+                      <div class="features-icon">
+                      <i class="fa fa-paint-brush"></i>
+                      </div>
+                      
+                      <div class="features-info">
+                         <h4>طراحی های حرفه ای</h4>
+                         <p></p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Features Icon-->
+              <div class="col-md-4">
+                  <div class="features-icon-box">
+                  
+                      <div class="features-icon">
+                     <i class="fa fa-line-chart"></i>
+                      </div>
+                      
+                      <div class="features-info">
+                         <h4>سیستم های یکپارچه و کارامد</h4>
+                         <p>طراحی و اجرای سیستم های با کمترین میزان پراکندگی انجام می گیرند. این ویژگی موجب عیب یابی راحت تر و استفاده آسان تر می شود.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Features Icon-->
+              <div class="col-md-4">
+                  <div class="features-icon-box">
+                  
+                      <div class="features-icon">
+                      <i class="fa fa-gift"></i>
+                      </div>
+                      
+                      <div class="features-info">
+                         <h4>کاهش هزینه ها و پایین بودن قیمت ها</h4>
+                         <p>سیستم ها بر اساس نیاز شما طراحی می شوند. یکی از مهم ترین معیار های طراحی ما پایین تر بودن هزینه های تمام شده برای مشتری در کنار کیفیت بالای کار است. </p>
+                      </div>
+                  </div>
+              </div>
+
+              
+           </div> <!-- /.row-->
+       </div> <!-- /.container-->
+  </section> 
+  <!--End Features-->
+
+
+{%endblock content%}
+   
+
+
