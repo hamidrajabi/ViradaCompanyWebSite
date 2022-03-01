@@ -21,7 +21,7 @@ from django.views.static import serve
 
 from django.conf import settings 
 
-from virada.sitemaps import StaticViewSitemap
+# from virada.sitemaps import StaticViewSitemap
 from django.contrib.sitemaps.views import sitemaps
 
 urlpatterns = [
