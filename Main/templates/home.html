@@ -100,13 +100,13 @@
                     <ul class="work-grid">
                         <!-- Work Item -->
                         {%for workItem in workItems%}
-                        <li class="work-item thumnail-img mix {{workItem.ourWork.title}}" style="min-height: 100%;object-fit: cover;" >
+                        <li class="work-item thumnail-img mix {{workItem.ourWork.title}}" >
                             <div class="work-image" >
                                 <img src="{{workItem.imageURL}}"  alt="thumbnail">
                                 
                                  <!--Hover link-->
                                  <div class="hover-link">
-                                    <a href="{%url 'single-work' workTitle=workItem.title %}">
+                                    <a href="{%url 'single-work' workId=workItem.id %}">
                                         <i class="fa fa-link"></i>
                                     </a>
         

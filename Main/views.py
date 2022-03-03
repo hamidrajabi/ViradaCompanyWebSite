@@ -16,8 +16,8 @@ def home(request):
 		'ourWorks':ourWorks,'workItems':workItems,'clientCompanies':clientCompanies,
 		'ourServices':ourServices})
 
-def single_work(request,workTitle):
-	workItem=WorkItem.objects.get(title=workTitle)
+def single_work(request,workId):
+	workItem=WorkItem.objects.get(id=workId)
 	context={'workItem':workItem}
 
 	return render(request,'single-work.html',context)
