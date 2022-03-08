@@ -11,7 +11,7 @@ def home(request):
 	workItems=WorkItem.objects.all()
 	clientCompanies=ClientCompany.objects.all()
 	ourServices=OurService.objects.all()
-
+	
 	return render(request,'home.html',{'headers':headers,'sliders':sliders,
 		'ourWorks':ourWorks,'workItems':workItems,'clientCompanies':clientCompanies,
 		'ourServices':ourServices})
@@ -19,5 +19,4 @@ def home(request):
 def single_work(request,workId):
 	workItem=WorkItem.objects.get(id=workId)
 	context={'workItem':workItem}
-
 	return render(request,'single-work.html',context)
