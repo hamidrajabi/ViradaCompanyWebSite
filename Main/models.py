@@ -62,7 +62,7 @@ class WorkItem(models.Model):
 	sliderImage2=models.ImageField(blank=True,null=True)
 	sliderImage3=models.ImageField(blank=True,null=True)
 	sliderImage4=models.ImageField(blank=True,null=True)
-	videoURL=models.URLField(max_length=1000,blank=True,null=True)
+	videoURL=models.TextField(max_length=1000,blank=True,null=True)
 	workDescription=models.CharField(max_length=200)
 	tags = models.ManyToManyField(Tag,related_name='tags')
 	created_at=models.DateTimeField(auto_now_add=True)
