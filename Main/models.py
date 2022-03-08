@@ -62,7 +62,7 @@ class WorkItem(models.Model):
 	sliderImage2=models.ImageField(blank=True,null=True)
 	sliderImage3=models.ImageField(blank=True,null=True)
 	sliderImage4=models.ImageField(blank=True,null=True)
-	sliderVideo=models.FileField(blank=True,null=True)
+	videoURL=models.URLField(max_length=1000,blank=True,null=True)
 	workDescription=models.CharField(max_length=200)
 	tags = models.ManyToManyField(Tag,related_name='tags')
 	created_at=models.DateTimeField(auto_now_add=True)
@@ -103,12 +103,6 @@ class WorkItem(models.Model):
 			url=''
 		return url
 
-	def videoURL(self):
-		try:
-			url=self.sliderVideo.url
-		except:
-			url=''
-		return url
 
 	def __str__(self):
 		return str(self.title)

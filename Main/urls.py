@@ -9,7 +9,7 @@ from . import views
 urlpatterns=[
 	#base url
 	path('',views.home,name="Home"),
-	path('single-work/<str:workId>/',views.single_work,name='single-work')
+	path('single-work/<int:workId>/',views.single_work,name='single-work')
 	# path('order/',views.orderPage,name="Order"),
 	]
 
