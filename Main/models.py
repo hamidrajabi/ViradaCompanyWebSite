@@ -1,5 +1,6 @@
 from django.db import models
 from taggit.managers import TaggableManager
+from django_jalali.db import models as jmodels
 
 # Create your models here.
 
@@ -62,10 +63,11 @@ class WorkItem(models.Model):
 	sliderImage2=models.ImageField(blank=True,null=True)
 	sliderImage3=models.ImageField(blank=True,null=True)
 	sliderImage4=models.ImageField(blank=True,null=True)
-	videoURL=models.TextField(max_length=1000,blank=True,null=True)
-	workDescription=models.CharField(max_length=200)
+	videoURL=models.URLField(max_length=1000,blank=True,null=True)
+	youTubeLink=models.URLField(max_length=1000,blank=True,null=True)
+	workDescription=models.TextField(max_length=2000)
 	tags = models.ManyToManyField(Tag,related_name='tags')
-	created_at=models.DateTimeField(auto_now_add=True)
+	created_at=jmodels.jDateTimeField(auto_now_add=True)
 	subtitle=models.CharField(max_length=200)
 
 	def imageURL(self):
